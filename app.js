@@ -37,8 +37,24 @@ const app = new Vue({
             }
             else{
                 resultado.innerHTML = `
-                <p>${this.nombre} tu indice IMC es: ${imc}%  ${estado}</p>
-                
+                <span>${this.nombre} tu indice IMC es: ${imc}%  ${estado}</span>
+                <span id="ayuda">
+                    <img src="imagenes/ayuda.svg" id="imagen-ayuda" alt="">
+                    <span id="descripcion-ayuda">
+            
+                        <ol class="lista" id="listaValores">
+                            <ul>porcentaje <= 18,5</ul>
+                            <ul>18,5 < porcentaje < 25</ul>
+                            <ul>porcentaje >= 25</ul>
+                        </ol>
+            
+                        <ol class="lista" id="listaPeso">
+                            <ul>Bajo peso</ul>
+                            <ul>Peso normal</ul>
+                            <ul>Sobre Peso</ul>
+                        </ol>
+                    </span>
+                 </span>
                 `;
             }
         },
