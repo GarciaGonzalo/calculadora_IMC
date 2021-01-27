@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagenes/pestaña.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>IMC Calculadora</title>
+</head>
+<body>
+
+<div id="app">
+    <div class="container">
+        
+        <h1 class="titulo">IMC Calculadora</h1>
+
+        <p id="descripcion">El índice de masa corporal (IMC) es un método utilizado 
+            para estimar la cantidad de grasa corporal que tiene una persona, y 
+            determinar por tanto si el peso está dentro del rango normal, o por el 
+            contrario, se tiene sobrepeso o delgadez.
+        </p>
+        
+        <div id="container-dos">
+
+            <span id="contenedor-form">
+                    <input class="input" type="text" placeholder="Nombre" v-model="nombre">
+                    <input class="input" type="number" placeholder="Altura (m)" step="0.01" v-model.number="altura">
+                    <input class="input" type="number" placeholder="Peso (Kg)" step="0.01" v-model.number="peso">
+                    <button id="boton" @click="imprimirResultado">Calcular</button>
+            </span>
+
+            <span id="contenedor-imagen">
+                <img src="imagenes/image.svg" id="imagen" alt="">
+            </span>
+        
+        </div>
+
+        <p class="titulo" id="resultado"></p>
+    
+    </div>
+
+    <span id="ayuda">
+        <img src="imagenes/ayuda.svg" id="imagen-ayuda" alt="">
+        <span id="descripcion-ayuda">
+            porcentaje < 18,5 <strong>Bajo peso</strong> <br>
+            18,5 < porcentaje < 25 <strong>Peso normal</strong> <br>
+            porcentaje >= 25 <strong>Sobre Peso</strong>
+        </span>
+    </span>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

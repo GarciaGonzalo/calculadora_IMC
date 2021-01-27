@@ -1,0 +1,250 @@
+html,body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+.container{
+    height: 100vh;
+}
+
+#container-dos{
+    display: flex;        
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+}
+
+.titulo{
+    text-align: center;
+    font-weight: 700;
+    margin: 0% 0% 2%;
+    padding-top: 2%;
+    color: rgb(39, 39, 39);
+}
+
+#descripcion{
+    margin: 0% 14%;
+    font-size: 14px;
+    color: rgb(61, 61, 61);
+}
+
+#contenedor-form{
+    width: 40%;
+}
+
+#contenedor-imagen{
+    width: 40%;
+    display: flex;
+    justify-content: left;
+}
+
+#imagen{
+    width: 80%;
+    padding-top: 5%;
+    max-width: 800px;
+}
+
+.input{
+  border-radius: 5px;
+  border: 1px solid #E6E8EC;
+  padding: 2%;
+  font-size: 12px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 3% auto;
+  background-color: rgb(250, 250, 250);
+}
+        /*Para borrar las flechas de los <input type="number>" */
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input:focus {
+    outline: 0px;
+    box-shadow: 0 0 0 1pt rgb(201, 210, 252);
+}
+
+#boton{
+  border-radius: 8px;
+  border: 0;
+  padding: 2.5%;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: #6C63FF;
+  color: rgb(39, 39, 39);
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  margin: 8% auto 4%;
+}
+
+#boton:focus {
+    outline: 0px;
+}
+
+#boton:hover {
+    background-color: #9a94ff;
+}
+
+#boton:active {
+    background-color: #6C63FF;
+}
+
+#ayuda{
+    max-width: 2em;
+    max-height: 2em;
+    position: absolute;
+    top: 85%;
+    left: 90%;
+}
+
+#imagen-ayuda{
+    max-width: 0.8em;
+}
+
+#descripcion-ayuda{
+    visibility: hidden;
+    width: 270px;
+    background-color: rgb(221, 221, 221);
+    color: rgb(44, 44, 44);
+    text-align: center;
+    font-size: 13px;
+    padding: 35% 15%;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -200px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#descripcion-ayuda::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 72%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221) transparent transparent transparent;
+}
+
+#ayuda:hover #descripcion-ayuda{
+    visibility: visible;
+    opacity: 1;
+}
+
+#alerta{
+    color: red;
+}
+
+#pesoNormal{
+    color: green;
+}
+
+@media (min-width: 1400px){
+    .titulo{
+        font-size: 48px;
+    }
+    #descripcion{
+        font-size: 20px;
+    }
+    #resultado{
+        font-size: 24px;
+    }
+    #boton{
+        font-size: 18px;
+    }
+    .input{
+        font-size: 18px;
+        padding: 3%;
+    }
+}
+
+@media (max-width: 1024px){
+    .titulo{
+        font-size: 48px;
+    }
+    #descripcion{
+        font-size: 18px;
+    }
+    #resultado{
+        font-size: 22px;
+    }
+    #boton{
+        font-size: 16px;
+        padding: 3.5%;
+        width: 68%;
+    }
+    .input{
+        font-size: 16px;
+        padding: 4%;
+        width: 60%;
+    }
+    #imagen{
+        width: 100%;
+        padding-top: 5%;
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 1000px){
+    .titulo{
+        font-size: 34px;
+    }
+    #descripcion{
+        font-size: 14px;
+    }
+    #resultado{
+        font-size: 16px;
+    }
+    #boton{
+        font-size: 12px;
+        width: 68%;
+        padding: 4%;
+    }
+    .input{
+        font-size: 12px;
+        padding: 3.5%;
+        width: 60%;
+    }
+    #imagen{
+        width: 100%;
+        padding-top: 5%;
+        max-width: 800px;
+    }
+
+    @media (max-width: 425px){
+        #contenedor-form{
+            width: 90%;
+            height: 80%;
+        }
+        #contenedor-imagen{
+            display: none;
+        }
+        .titulo{
+            font-size: 28px;
+            margin: 4%;
+        }
+        #descripcion{
+            font-size: 12px;
+        }
+        #resultado{
+            font-size: 14px;
+            margin-top: 0%;
+        }
+        #boton{
+            font-size: 12px;
+            width: 68%;
+            padding: 3%;
+        }
+        .input{
+            font-size: 12px;
+            padding: 3%;
+            width: 60%;
+        }
+    }  
+}
