@@ -11,7 +11,7 @@ const app = new Vue({
         estado: '',
     },
 
-
+    //Comentario prueba
     methods:{
         ResultadoDelIndice (indice){
         let resultadoDelIndice = '';
